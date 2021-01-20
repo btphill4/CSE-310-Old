@@ -15,17 +15,16 @@ CFLAGS=-c -Wall
 #this target will compile all the files "make all"
 all: encode
 	
-encode: encode.cpp 
-	$(CC) encode.cpp -o project1
+encode: encode.cpp
+	$(CC) encode.cpp -o encode
 
 encode.o: encode.cpp
-	$(CC) $(CFLAGS) project1.cpp
-
+	$(CC) $(CFLAGS) encode.cpp
 
 clean:
-	rm -rf *o project1
+	rm -rf *o encode
 
 
 #this target will compile when "make compile" is executed
 #compile:
-#	g++ encode.cpp -o project1
+#	g++ encode.cpp -o encode
